@@ -27,7 +27,7 @@ edition: "community"
 
 image:
   repository: sonarqube
-  tag: 9.4.0-{{ .Values.edition }}
+  tag: 9.5.0-{{ .Values.edition }}
   pullPolicy: IfNotPresent
   # If using a private repository, the imagePullSecrets to use
   # pullSecrets:
@@ -292,6 +292,9 @@ monitoringPasscode: "define_it"
 ## Environment variables to attach to the pods
 ##
 # env:
+#   # If you use a different ingress path from /, you have to add it here as the value of SONAR_WEB_CONTEXT
+#   - name: SONAR_WEB_CONTEXT
+#     value: /sonarqube
 #   - name: VARIABLE
 #     value: my-value
 
@@ -458,6 +461,7 @@ tests:
 serviceAccount:
   create: false
   # name:
+  # automountToken: false # default
   ## Annotations for the Service Account
   annotations: {}
 

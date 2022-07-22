@@ -1,6 +1,27 @@
 # SonarQube Chart Changelog
 All changes to this chart will be documented in this file.
 
+## [4.0.2]
+* Fix issue with Openshift route name to use use fullname instead of name
+
+## [4.0.1]
+* Add documentation for ingress annotations
+
+## [4.0.0]
+* updated SonarQube to 9.5.0
+
+## [3.0.4]
+* Fix issue with additional network policy
+
+## [3.0.3]
+* Add automount service account token flag
+
+## [3.0.2]
+* Add documentation to setup web context via environment variable
+
+## [3.0.1]
+* Fix for issue (#215)[https://github.com/SonarSource/helm-chart-sonarqube/issues/215], adding tolerations and affinity to change password hooks
+
 ## [3.0.0]
 * updated SonarQube to 9.4.0
 
